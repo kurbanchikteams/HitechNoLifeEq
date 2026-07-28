@@ -33,7 +33,7 @@ HitechNoLifeEq — это открытый VST3-плагин, созданный
 
 ### Как собрать проект:
 1. Клонируйте репозиторий:
-   git clone https://github.com/your-username/HitechNoLifeEq.git
+   git clone https://github.com/kurbanchikteams/HitechNoLifeEq.git
 2. Откройте .jucer файл в Projucer или сгенерируйте решение через CMake.
 3. Скомпилируйте проект в Visual Studio 2022 (режим Release | x64).
 
