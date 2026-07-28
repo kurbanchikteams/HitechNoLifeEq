@@ -19,9 +19,8 @@ jobs:
     - name: Build Plugin
       run: cmake --build build --config Release
 
-    - name: Upload VST3 Artifact
+    - name: Upload VST3
       uses: actions/upload-artifact@v4
       with:
         name: HitechNoLifeEq-VST3
-        path: |
-          build/**/*.vst3
+        path: build/**/*.vst3
