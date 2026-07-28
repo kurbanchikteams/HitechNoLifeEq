@@ -8,7 +8,7 @@ include(FetchContent)
 FetchContent_Declare(
     JUCE
     GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-    GIT_TAG        7.0.9
+    GIT_TAG        7.0.12
 )
 FetchContent_MakeAvailable(JUCE)
 
@@ -23,20 +23,19 @@ juce_add_plugin(HitechNoLifeEq
     PLUGIN_MANUFACTURER_CODE KtsP
     PLUGIN_CODE Htnl
     FORMATS VST3
-    VST3_AUTO_MANIFEST FALSE  # <--- ВОТ ЭТА СТРОЧКА ОТКЛЮЧАЕТ ГЛЮЧНЫЙ HELPER!
+    VST3_AUTO_MANIFEST FALSE
 )
 
 target_sources(HitechNoLifeEq PRIVATE
-    PluginProcessor.h
-    PluginProcessor.cpp
-    PluginEditor.h
-    PluginEditor.cpp
+    Source/PluginProcessor.h
+    Source/PluginProcessor.cpp
+    Source/PluginEditor.h
+    Source/PluginEditor.cpp
 )
 
 target_link_libraries(HitechNoLifeEq PRIVATE
     juce::juce_audio_utils
     juce::juce_audio_processors
-    juce::juce_dsp
     juce::juce_gui_basics
     juce::juce_gui_extra
 )
